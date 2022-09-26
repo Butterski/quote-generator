@@ -1,38 +1,96 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  animation: fadeIn 2s;
+  opacity: 1;
+}
+.random-button-container {
+  position: absolute;
+  margin: 2% 5%;
+  right: 0;
+  top: 0;
+  display: flex;
+  width: 6rem;
+  cursor: pointer;
+  user-select: none;
+}
+.random-button {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-weight: 500;
+  align-items: center;
+}
+.quote-author-container {
+  width: 70%;
+  max-height: 50%;
+  display: flex;
+  margin-top: 10%;
+  flex-direction: column;
+}
+.quote-container {
+  display: flex;
+  font-size: 2rem;
+  font-family: Raleway;
+  font-weight: 500;
+  line-height: 43px;
+  margin-bottom: 10%;
+  letter-spacing: 0em;
+}
+.yellow-bar {
+  min-width: 8px;
+  height: inherit;
+  background-color: #f7de95;
+  margin-right: 10%;
+}
+.quote-author-button {
+  display: flex;
+  margin: 10%;
+  margin-top: 5%;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 28px;
+  height: 100px;
+  color: #4F4F4F;
+  padding: 3%;
+  cursor: pointer;
+}
+.top-name{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 28px;
+  color: #4F4F4F;
+  position: absolute;
+}
+.quote-category {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 2%;
+  color: #828282;
+}
+.quote-author-button:hover{
+  background: #333333;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.quote-author-arrow{
+  right: 0;
+  color: white;
+  zoom: 2;
+  user-select: none;
 }
-
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+  	opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+ 	opacity: 1;
   }
 }
